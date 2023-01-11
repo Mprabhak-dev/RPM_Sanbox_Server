@@ -139,8 +139,8 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() =>
-    app.listen(PORT, "0.0.0.0", () => {
-      console.log(`RPM Server Running at http://localhost:${PORT}`);
+    app.listen(PORT, () => {
+      console.log(`RPM Server Running at ${PORT}`);
     })
   )
   .catch((err) => {
