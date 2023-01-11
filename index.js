@@ -7,6 +7,7 @@ const cors = require("cors");
 const path = require("path");
 const userRouter = require("./routes/userRoutes");
 const sessionRouter = require("./routes/sessionRoutes");
+const { createDir } = require("./util/helperFunctions");
 // const multer = require("multer");
 // const router = express.Router();
 // var fs = require("fs");
@@ -15,6 +16,8 @@ const sessionRouter = require("./routes/sessionRoutes");
 const PORT = process.env.PORT || 5000;
 
 // app.use("/logs", express.static(path.join(__dirname, "/logs")));
+
+createDir("./logs");
 
 app.use(cors());
 app.use(express.json());
